@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:miserend/colors.dart';
 import 'package:miserend/database/favorites_service.dart';
 import 'package:miserend/splash.dart';
 import 'package:provider/provider.dart';
@@ -19,13 +18,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        backgroundColor: Colors.grey,
-        primarySwatch: CustomColors.purple,
-      ),
-      home: const RouteSplash(),
+    return const MaterialApp(
+      home: RouteSplash(),
     );
   }
 }

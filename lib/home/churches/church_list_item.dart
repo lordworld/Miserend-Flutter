@@ -43,7 +43,7 @@ class _ChurchListItemState extends State<ChurchListItem> {
                                     8.0, 8.0, 8.0, 4.0),
                                 child: Text(church.name ?? "",
                                     style:
-                                        Theme.of(context).textTheme.subtitle1),
+                                        Theme.of(context).textTheme.titleSmall),
                               ),
                               Expanded(
                                 child: Padding(
@@ -52,15 +52,15 @@ class _ChurchListItemState extends State<ChurchListItem> {
                                   child: Text(church.commonName ?? "",
                                       style: Theme.of(context)
                                           .textTheme
-                                          .subtitle2),
+                                          .titleSmall),
                                 ),
                               ),
                               Padding(
                                 padding: const EdgeInsets.all(4.0),
                                 child: Wrap(
                                     spacing: 4,
-                                    children: List<Widget>.generate(masses.length,
-                                        (index) {
+                                    children: List<Widget>.generate(
+                                        masses.length, (index) {
                                       return TimeChip(time: masses[index].time);
                                     })),
                               ),

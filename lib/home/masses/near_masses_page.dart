@@ -6,7 +6,6 @@ import 'package:miserend/database/mass_with_church.dart';
 import 'package:miserend/home/masses/mass_list_item.dart';
 import 'package:miserend/mass_filter.dart';
 
-
 class NearMassesPage extends StatefulWidget {
   const NearMassesPage({super.key});
 
@@ -14,9 +13,9 @@ class NearMassesPage extends StatefulWidget {
   State<NearMassesPage> createState() => _NearMassesPageState();
 }
 
-class _NearMassesPageState extends State<NearMassesPage>  with
-    AutomaticKeepAliveClientMixin<NearMassesPage>{
-
+class _NearMassesPageState extends State<NearMassesPage>
+    with AutomaticKeepAliveClientMixin<NearMassesPage> {
+  // TODO: current position
   late Position _currentPosition;
   List<MassWithChurch> masses = <MassWithChurch>[];
 
@@ -33,9 +32,7 @@ class _NearMassesPageState extends State<NearMassesPage>  with
       padding: const EdgeInsets.all(8),
       itemCount: masses.length,
       itemBuilder: (BuildContext context, int index) {
-        return MassListItem(
-            massWithChurch: masses[index]
-        );
+        return MassListItem(massWithChurch: masses[index]);
       },
     );
   }

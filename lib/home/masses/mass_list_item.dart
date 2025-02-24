@@ -42,9 +42,8 @@ class MassListItem extends StatelessWidget {
                 children: [
                   Text(massWithChurch.church.name ?? "?",
                       overflow: TextOverflow.ellipsis),
-                  Text(
-                      massWithChurch.mass.time?.to24hours() ?? "?",
-                      style: Theme.of(context).textTheme.headline4),
+                  Text(massWithChurch.mass.time?.to24hours() ?? "?",
+                      style: Theme.of(context).textTheme.headlineSmall),
                 ],
               ),
             ),
